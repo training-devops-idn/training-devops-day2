@@ -1,89 +1,129 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Web</title>
+<title>Cyber Server</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(-45deg, #050505, #0a0f2c, #3a0ca3, #7209b7);
+    background-size: 400% 400%;
+    animation: bg 12s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
+}
+
+@keyframes bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Card */
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 40px;
+.card {
     width: 90%;
-    max-width: 420px;
+    max-width: 520px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 0 30px rgba(114, 9, 183, 0.6),
+        0 0 80px rgba(58, 12, 163, 0.4);
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
 }
 
-.container h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+/* Glow border */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    padding: 2px;
+    background: linear-gradient(135deg, #00f5ff, #9d4edd, #ff00ff);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 }
 
-.container p {
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #00f5ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+p {
     font-size: 0.95rem;
     opacity: 0.85;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    line-height: 1.6;
 }
 
 /* Button */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
+    padding: 15px 45px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00f5ff, #9d4edd);
+    color: #000;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.7);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 114, 255, 0.6);
+    transform: scale(1.1);
+    box-shadow:
+        0 0 40px rgba(255, 0, 255, 0.9),
+        0 0 80px rgba(157, 78, 221, 0.8);
 }
 
 /* Footer */
 .footer {
-    margin-top: 25px;
-    font-size: 0.8rem;
-    opacity: 0.7;
+    margin-top: 30px;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    letter-spacing: 2px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>🚀 Welcome</h1>
-    <p>Server berjalan normal.<br>
-       HTML modern siap digunakan.</p>
+<div class="card">
+    <h1>SERVER ONLINE</h1>
+    <p>
+        Infrastructure ready.<br>
+        High availability • Secure • Optimized
+    </p>
 
-    <a href="#" class="btn">Get Started</a>
+    <a href="#" class="btn">ENTER SYSTEM</a>
 
     <div class="footer">
-        © 2025 • Powered by Linux
+        © 2025 | CYBER LAB
     </div>
 </div>
 
